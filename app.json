@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "shopcom-ar",
-    "slug": "shopcom-ar",
+    "name": "shopcom-search",
+    "slug": "shopcom-search",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,34 +9,29 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#00a8ca"
     },
-    "plugins": [
-      [
-        "react-native-vision-camera",
-        {
-          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera."
-        }
-      ]
-    ],
+   
     "updates": {
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
-    "android": {
+     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#00a8ca"
       },
-      "permissions": [
-        "android.permission.CAMERA"
-      ],
-      "package": "com.mrmaiko.shopcomar"
+      "package": "com.shopcom.test"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d599e09d-243b-4591-b7da-fbe8e1b0f62f"
+      }
     }
   }
 }

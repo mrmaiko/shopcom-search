@@ -4,20 +4,12 @@
   },
   "build": {
     "development": {
+      "developmentClient": false,
       "distribution": "internal",
       "android": {
         "gradleCommand": ":app:assembleDebug"
-      },
-      "ios": {
-        "buildConfiguration": "Debug"
       }
-    },
-    "preview": {
-      "distribution": "internal"
-    },
-    "production": {}
-  },
-  "submit": {
-    "production": {}
-  }
+
+    }
+}
 }

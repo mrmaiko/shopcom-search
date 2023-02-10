@@ -1,18 +1,27 @@
-import { useEffect, useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, Dimensions } from "react-native";
-import CameraHandler from "./components/CameraHandler";
+import * as React from "react";
+import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "./src/Home";
+import List from "./src/List";
+import ProductDetail from "./src/ProductDetail";
 
-export default function App() {
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <SafeAreaView
-      style={{
-        alignContent: "center",
-        alignItems: "center",
-        justifyContent: "center",
-        height: Dimensions.get("window").height,
-      }}
-    >
-      <CameraHandler />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="List" component={List} />
+        <Stack.Screen name="ProductDetail" component={ProductDetail} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+export default App;
