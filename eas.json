@@ -2,14 +2,9 @@
   "cli": {
     "version": ">= 0.49.0"
   },
-  "build": {
-    "development": {
-      "developmentClient": false,
-      "distribution": "internal",
-      "android": {
-        "gradleCommand": ":app:assembleDebug"
-      }
-
+   "build": {
+    "preview": {
+      "distribution": "internal"
     }
-}
+  }
 }
